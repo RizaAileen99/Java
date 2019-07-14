@@ -1,0 +1,76 @@
+/**
+ * @(#)temp.java
+ *
+ *
+ * @author 
+ * @version 1.00 2019/3/30
+ */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class  GITOJORDA_TEMP extends JFrame {
+	
+	int item;
+	
+	Container con = getContentPane();
+	JTextField input1 = new JTextField(10);
+	 
+	JTextField input2 = new JTextField(10);
+	
+	 
+	JLabel equal = new JLabel("=");
+	JLabel creator = new JLabel("Created By : Gito & Jorda");
+  	String[] s1 = new String[] {"Celsius","Fahrenheit","Kelvin","Rankine","Reaumur"};
+  	String[] s2 = new String[] {"Celsius","Fahrenheit","Kelvin","Rankine","Reaumur"};
+  	JComboBox tmp1 = new JComboBox(s1);
+  	JComboBox tmp2 = new JComboBox(s2);
+  	 
+    public GITOJORDA_TEMP() {
+    	
+    	 setTitle("Temperature Converter");
+    	 setVisible(true);
+    	 setLocation(420,250);
+    	 setSize(500,125); //width and height
+    	 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	 setResizable(false);
+    	
+    	 
+    	 con.setLayout(new FlowLayout());
+    	 con.setBackground(Color.BLACK);
+    	 con.add(tmp1);
+    	 tmp1.setOpaque(true);
+         tmp1.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 14));
+         tmp1.setBackground(Color.ORANGE);
+         tmp1.setForeground(Color.BLACK);
+    	 
+    	 con.add(input1);
+    	 
+    	 
+    	 con.add(equal);
+    	 equal.setFont(equal.getFont().deriveFont(40f));
+    	 equal.setForeground(Color.GREEN);
+    	  
+    	 con.add(tmp2);
+    	 tmp2.setOpaque(true);
+         tmp2.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 14));
+         tmp2.setBackground(Color.ORANGE);
+         tmp2.setForeground(Color.BLACK);
+   	     
+    	 con.add(input2);
+    	 con.add(creator);
+    	 creator.setForeground(Color.ORANGE);
+    }
+    
+   
+    	
+     
+   
+    public static void main (String args[]){
+    	
+    	GITOJORDA_TEMP test = new GITOJORDA_TEMP();
+    
+    }
+}
+
+
